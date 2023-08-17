@@ -21,7 +21,6 @@ def convert_currency(amount, base_currency, target_currency):
     converted_amount = amount * exchange_rate
     return converted_amount
 
-# Example usage
 amount_to_convert = float(input("Enter the amount to convert: "))
 base_currency = input("Enter the base currency (e.g., USD): ").upper()
 target_currency = input("Enter the target currency (e.g., EUR): ").upper()
