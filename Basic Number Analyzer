@@ -1,0 +1,30 @@
+print('Enter your numbers individually. Type done when you are finished.')
+total = 0
+count = 0
+a = []
+
+while True:
+    try:
+        num = input('Enter your number: ')
+        if num == 'done':
+            break
+        num = float(num)
+        a.append(num)
+        maxi = a[0]
+        mini = a[0]
+        total = total + num
+        count = count + 1
+        continue
+    except:
+        print('Please input a valid number.')
+        continue
+
+
+a.sort()            #rearranging array for easier calculations and better efficiency
+maxi = a[count-1]   #originally the max and min were calculated in the while loop, this is easier
+mini = a[0]
+average = total / count
+median = a[int((count / 2))]
+
+print('Total: {0} Count: {1} Average: {2}'.format(total, count, average))
+print('Max: {0} Min: {1} Median: {2}'.format(maxi, mini, median))
